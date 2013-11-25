@@ -110,6 +110,10 @@ Route::get('foo', array('https', function()
     return 'Must be over HTTPS';
 }));
 
-
+Route::get('flex',function(){
+	$title = 'Flex';
+	return View::make('home.flex')
+			->with('title',$title);
+});
 
 Route::resource('posts', 'PostsController');
